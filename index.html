@@ -17,15 +17,18 @@
 
     <body>
         <header class="header">
-            <a href="#home" class="logo"><span>G</span>yiwah <span>A</span>lex
-            <span>F</span>rimpong</a>
+            <div class="logo-box">
+                <img src="android-chrome-512x512.png" alt="" class="logo-icon">
+                <a href="#home" class="logo">GAF<span> T</span>ech</a>
+            </div>
 
-            <i class='bx bx-menu' id="menu-icon"></i>
-            <nav class="navbar">
+            <i class='bx bx-menu' id="menu-icon"></i>            
+            <nav class="navbar" id="navbar">
                 <a href="#home" class="active">Home</a>
                 <a href="#education">Education</a>
                 <a href="#services">Services</a>
                 <a href="#testimonials">Testimonials</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
@@ -34,24 +37,18 @@
             <div class="home-content">
                 <h1>Hi, I'm <span>GAF</span></h1>
                 <h3 class="text-animation">I'm a <span></span></h3>
-                <p>Welcome to my portfolio! I'm Gyiwah Alex Frimpong, a multifaceted technology 
-                    professional with expertise in programming, web development, 
-                    web design, and software engineering. With a strong foundation 
-                    in languages such as Java, C++, VB, C#, and JavaScript, I craft 
-                    innovative solutions that combine technical proficiency with 
-                    creative flair. My skills in HTML and CSS enable me to bring 
-                    responsive and visually stunning designs to life. 
-                    As a dedicated teacher, I'm passionate about sharing knowledge 
-                    and empowering others to succeed. Explore my portfolio to see 
-                    how I've applied my skills to deliver effective and user-friendly 
-                    solutions.
+                <p>Welcome to my portfolio! I'm Gyiwah Alex Frimpong, a versatile tech 
+                    professional skilled in programming, web development, design, and 
+                    software engineering. Proficient in Java, C++, VB, C#, PHP, JavaScript, 
+                    SQL, HTML, and CSS, I create innovative and visually appealing solutions. 
+                    As a dedicated teacher, I'm passionate about sharing knowledge. 
+                    Explore my work to see my user-friendly projects.
                 </p>
 
                     <div class="social-icons">
                         <a href="#"><i class='bx bxl-linkedin'></i></a>
                         <a href="#"><i class='bx bxl-github'></i></a>
                         <a href="#"><i class='bx bxl-instagram' ></i></a>
-                        <a href="#"><i class='bx bxl-twitter' ></i></a>
                         <a href="#"><i class='bx bxl-youtube'></i></a>
                         <a href="#"><i class='bx bxl-tiktok' ></i></a>
                     </div>
@@ -79,8 +76,8 @@
                         <p> <em class="title">University of Education, Winneba.</em> <br>
                             <em class="subtitle">BSc. in Information and Communication Technology Education</em> <br>
                             
-                            Engaged in advanced courses in Java, C++, Visual Basic, C#, PHP, SQL, HTML, CSS, and JavaScript.
-                            Regularly taught colleagues courses such as C++, Visual Basic, C#, Java, Discrete Mathematics, and web designing.
+                            Engaged in advanced courses in Java, C++, VB, C#, PHP, SQL, HTML, CSS, and JavaScript.
+                            Regularly taught colleagues these courses.
                             Currently working on a project related to assistive technology.</p>
                     </div>
                     
@@ -135,12 +132,10 @@
                 <div class="service-box">
                     <div class="service-info">
                         <h4>Web Development</h4>
-                        <p> I build dynamic, responsive websites using HTML, 
-                            CSS, and JavaScript. My skills in front-end and 
-                            back-end development allow me to create full-stack 
-                            solutions that are both aesthetically pleasing and 
-                            highly functional. I ensure cross-browser compatibility 
-                            and mobile responsiveness in all my web projects.
+                        <p> I create dynamic, responsive websites with HTML, 
+                            CSS, and JavaScript. My full-stack development skills 
+                            ensure aesthetically pleasing, functional solutions 
+                            with cross-browser compatibility and mobile responsiveness.
                         </p>
                     </div>
                 </div>
@@ -148,12 +143,10 @@
                 <div class="service-box">
                     <div class="service-info">
                         <h4>Software Engineering</h4>
-                        <p> My software engineering expertise includes designing, 
-                            developing, testing, and maintaining software 
-                            applications. I follow best practices in software 
-                            development, including agile methodologies, 
-                            version control with Git, and continuous 
-                            integration/continuous deployment (CI/CD) pipelines.
+                        <p> My software engineering expertise encompasses designing, 
+                            developing, testing, and maintaining software applications. 
+                            I adhere to best practices such as agile methodologies, 
+                            version control with Git, and CI/CD pipelines.
                         </p>
                     </div>
                 </div>
@@ -161,12 +154,10 @@
                 <div class="service-box">
                     <div class="service-info">
                         <h4>Programming</h4>
-                        <p> With expertise in various programming languages such as 
-                            Java, C++, Visual Basic, and C#, I develop robust and 
-                            efficient software solutions tailored to meet specific 
-                            needs. My projects range from simple scripts to complex 
-                            systems, demonstrating my ability to solve problems 
-                            through code.
+                        <p> With expertise in programming languages like Java, C++, 
+                            Visual Basic, and C#, I create robust and efficient 
+                            software solutions. My projects range from simple scripts 
+                            to complex systems, showcasing my problem-solving abilities through code.
                         </p>
                     </div>
                 </div>
@@ -174,12 +165,10 @@
                 <div class="service-box">
                     <div class="service-info">
                         <h4>Teaching</h4>
-                        <p> I have a strong passion for education and have taught 
-                            various courses, including C++, Visual Basic, C#, Java, 
-                            Discrete Mathematics, and web designing, to my peers and 
-                            students. My teaching experience extends to conducting 
-                            workshops and tutoring sessions, where I break down 
-                            complex concepts into understandable lessons.
+                        <p> I am passionate about education and have taught 
+                            courses such as C++, VB, C#, Java, and web design to peers and students. 
+                            My experience includes conducting workshops and tutoring 
+                            sessions, simplifying complex concepts into understandable lessons.
                         </p>
                     </div>
                 </div>
@@ -271,6 +260,22 @@
             </div>
         </section>
 
+        <section class="gallery" id="gallery">
+            <h2 class="heading">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <video src="video1.mp4" alt="Video 1"></video>
+                </div>
+                <!-- Add more images and videos here -->
+            </div>
+        </section>
+
         <section class="contact" id="contact">
             <h2 class="heading">Let's <span>Connect</span></h2>
             <div class="contact-content">
@@ -304,9 +309,7 @@
         <footer class="footer">
             <div class="social">
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
                 <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
                 <a href="#"><i class='bx bxl-youtube'></i></a>
                 <a href="#"><i class='bx bxl-tiktok' ></i></a>
                 <a href="#"><i class='bx bxl-facebook' ></i></a>
@@ -315,10 +318,11 @@
 
             <ul class="list">
                 <li><a href="#">FAQ</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="testiminials">Testimonials</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#home">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
             </ul>
             <p class="copyright">
                 © GAF Tech | all Right Reserved
