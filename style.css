@@ -31,9 +31,12 @@ html{
     background: rgb(0,0,0,0.3);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     z-index: 5;
+}
+.logo-box{
+    display: flex;
 }
 .logo{
     font-size: 3rem;
@@ -42,11 +45,25 @@ html{
     cursor: pointer;
     transition: 0.3s ease;
 }
-.logo.hover{
+.logo-box .logo:hover{
     transform: scale(1.1);
 }
 .logo span{
     text-shadow: 0 0 25px var(--main-color);
+}
+.logo-icon{
+    background-color: white;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    width: 50px;
+    box-shadow: 0 0 15px var(--main-color),
+                0 0 15px var(--main-color);
+    transition: 0.3s ease;
+    margin-right: 20px;
+}
+.logo-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .navbar a{
     font-size: 1.8rem;
@@ -390,6 +407,7 @@ box-shadow: 0 0 25px transparent;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 5rem;
 }
 .testimonials .heading{
     margin-bottom: 5rem;
@@ -442,8 +460,34 @@ box-shadow: 0 0 25px transparent;
     color: gold;
     font-size: 2rem;
 }
+
+.gallery {
+    background-color: var(-bg-color);
+    padding: 100px 15px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
 .contact{
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 .contact h2{
     margin-bottom: 3rem;
@@ -492,11 +536,12 @@ box-shadow: 0 0 25px transparent;
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 .footer .social{
     text-align: center;
     padding-bottom: 25px;
+    margin-top: 15px;
     color: var(--main-color);
 }
 .footer .social a{
@@ -588,7 +633,7 @@ footer ul li a:hover{
         padding: 2rem 3%;
     }
 }
-@media(max-width:895px){
+@media(max-width:720px){
     #menu-icon{
         display: block
     }
@@ -622,8 +667,8 @@ footer ul li a:hover{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
+        font-size: 6.5rem;
+        margin-top: 2.5rem;
     }
     .home-content p{
         max-width: 600px;
