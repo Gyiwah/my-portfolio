@@ -55,10 +55,8 @@ html{
     background-color: white;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 0 15px var(--main-color),
-                0 0 15px var(--main-color);
+    width: 50px;
+    height: 50px;
     transition: 0.3s ease;
     margin-right: 20px;
 }
