@@ -632,7 +632,8 @@ footer ul li a:hover{
         font-size: 2rem;
     }
     .logo-icon {
-        width: 30px;
+        width: 40px;
+        height: 40px;
     }
     .home-content h1 {
         font-size: 6rem;
@@ -702,6 +703,7 @@ footer ul li a:hover{
     }
     .logo-icon{
         width: 40px;
+        height: 40px;
     }
     .home-img img{
         width: 56vw;
