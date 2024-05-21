@@ -55,7 +55,8 @@ html{
     background-color: white;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    width: 50px;
+    width: 40px;
+    height: 40px;
     box-shadow: 0 0 15px var(--main-color),
                 0 0 15px var(--main-color);
     transition: 0.3s ease;
@@ -384,7 +385,7 @@ box-shadow: 0 0 25px transparent;
     max-height: 200px;
     justify-content: left;
     align-items: baseline;
-    padding: 5rem 5rem;
+    padding: 2.5rem;
 }
 .service-info h4{
     font-size: 3rem;
@@ -589,6 +590,8 @@ footer ul li a:hover{
     font-size: 16px;
     color: white;
 }
+
+/*===============Media Query For Small Screens================*/
 @media(max-width: 1285px){
     html{
         font-size: 55%;
@@ -598,8 +601,15 @@ footer ul li a:hover{
         grid-template-columns: repeat(2, 1fr);
         margin: 0 5rem;
     }
+    .service-box .service-info{
+        padding: 2.5rem;
+    }
+    .home-content h3 {
+        font-size: 3.5rem;
+        }
 }
-@media(max-width:991px){
+
+@media(max-width:1074px){
     header{
         padding: 2rem 3%;
     }
@@ -617,6 +627,24 @@ footer ul li a:hover{
     .timeline-item:nth-child(even){
         padding-left: 73px;
     }
+    .navbar a {
+        font-size: 1.6rem;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .logo-icon {
+        width: 30px;
+    }
+    .home-content h1 {
+        font-size: 6rem;
+    }
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+    .text-animation {
+        font-size: 2.4rem;
+    }
     .timeline-dot{
         left: 0;
     }
@@ -633,7 +661,7 @@ footer ul li a:hover{
         padding: 2rem 3%;
     }
 }
-@media(max-width:720px){
+@media(max-width:768px){
     #menu-icon{
         display: block
     }
@@ -667,12 +695,15 @@ footer ul li a:hover{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 6.5rem;
-        margin-top: 2.5rem;
+        font-size: 4.5rem;
+        margin-top: 2rem;
     }
     .home-content p{
         max-width: 600px;
         margin: 0 auto;
+    }
+    .logo-icon{
+        width: 40px;
     }
     .home-img img{
         width: 56vw;
@@ -680,12 +711,122 @@ footer ul li a:hover{
     .services h2{
         margin-bottom: 3rem;
     }
+    .services h4{
+        margin-top: 2rem;
+        font-size: 16px;
+    }
     .services-container{
         grid-template-columns: repeat(1, 1fr);
     }
+    .service-box{
+        margin: 2rem;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 422px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        background: var(--second-bg-color);
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+    .home-content p {
+        font-size: 1.5rem;
+    }
+    .heading {
+        font-size: 6rem;
+    }
+    .timeline-items::before {
+        left: 0;
+    }
+    .timeline-item .timeline-content {
+        width: 100%;
+        padding: 1rem;
+    }
+    .timeline-item{
+        margin-left: -30px;
+    }
+    .timeline-dot{
+        margin-left: 22px;
+    }
+    .timeline-content h3{
+        margin-top: 5px;
+    }
+    .timeline-content p{
+        margin-bottom: 3px;
+    }
+    .education{
+        padding: 50px 15px;
+    }
+    .heading{
+        margin: 0 0 5rem 0;
+    }
+    .contact-form, .contact-info {
+        padding: 1rem;
+    }
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+    .services h2{
+        margin-bottom: 5rem;
+    }
+    .service-box{
+        border: 0 solid;
+    }
+    .service-box .service-info{
+        padding: 1rem 2rem;
+    }
+    .services h4 {
+        margin-top: 1rem;
+    }
+    .testimonials{
+        padding-top: 3.5rem;
+    }
+    .gallery{
+        padding: 6rem 1.8rem;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact-content {
+        margin: 0;
+        padding: 1rem;
+        letter-spacing: normal;
+        font-size: 1.5rem;
+    }
+    .footer .social a {
+        margin: 1rem 0.3rem;
+    }
 }
 
-
+/*================================================================*/
 
 /*validation feedback */
 input:invalid, textarea:invalid {
