@@ -1,377 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device, initial-scale=1.0">
-        
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alex Frimpong Gyiwah | Software Developer &amp; ICT Educator</title>
+  <meta name="description" content="Portfolio of Alex Frimpong Gyiwah: Software Developer and ICT Educator based in Ghana. Engineering practical web, mobile, and database systems for education, retail operations, and academic performance.">
+  <meta name="keywords" content="Alex Frimpong Gyiwah, Gyiwah, GAF Tech, Software Developer Ghana, ICT Educator, UEW, SCAS, OmniPOS, Ascenda, GPA Calculator, MariaDB Database Engineering, React Native Expo">
+  <meta name="author" content="Alex Frimpong Gyiwah">
 
-    <body>
-        <header class="header">
-            <div class="logo-box">
-                <img src="GAF.png" alt="" class="logo-icon">
-                <a href="#home" class="logo">GAF<span> T</span>ech</a>
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gyiwah.github.io/my-portfolio/">
+  <meta property="og:title" content="Alex Frimpong Gyiwah | Software Developer &amp; ICT Educator">
+  <meta property="og:description" content="Building useful software. Making technology easier to learn. Web, mobile, and relational database systems engineered for real-world workflows.">
+  <meta property="og:image" content="Profile-Picture.jpg">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#080c15">
+
+  <!-- Typography: Google Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#projects" class="skip-link">Skip to selected projects</a>
+
+  <!-- ======================================================================
+       1. Site Header
+       ====================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="#home" class="brand-link" aria-label="Alex Frimpong Gyiwah Home">
+        <img src="Profile-Picture.jpg" alt="Alex Frimpong Gyiwah" class="brand-avatar" width="44" height="44">
+        <div class="brand-info">
+          <span class="brand-name">
+            Alex Frimpong Gyiwah
+            <span class="brand-tag">GAF Tech</span>
+          </span>
+          <span class="brand-title">Software Developer &amp; ICT Educator</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#impact" class="nav-link">Teaching &amp; Impact</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- ====================================================================
+         2. Hero Section
+         ==================================================================== -->
+    <section class="section hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              Software Developer &middot; ICT Educator &middot; Ghana
             </div>
 
-            <i class='bx bx-menu' id="menu-icon"></i>            
-            <nav class="navbar" id="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#education">Education</a>
-                <a href="#services">Services</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+            <h1 class="hero-headline">
+              Building useful software.<br>
+              <span class="text-gradient">Making technology easier to learn.</span>
+            </h1>
 
-        <section class="home" id="home">
-            <div class="home-content">
-                <h1>Hi, I'm <span>GAF</span></h1>
-                <h3 class="text-animation">I'm a <span></span></h3>
-                <p>Welcome to my portfolio! I'm Gyiwah Alex Frimpong, a versatile tech 
-                    professional skilled in programming, web development, design, and 
-                    software engineering. Proficient in Java, C++, VB, C#, PHP, JavaScript, 
-                    SQL, HTML, and CSS, I create innovative and visually appealing solutions. 
-                    As a dedicated teacher, I'm passionate about sharing knowledge. 
-                    Explore my work to see my user-friendly projects.
-                </p>
-
-                    <div class="social-icons">
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#"><i class='bx bxl-github'></i></a>
-                        <a href="#"><i class='bx bxl-instagram' ></i></a>
-                        <a href="#"><i class='bx bxl-youtube'></i></a>
-                        <a href="#"><i class='bx bxl-tiktok' ></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                        <a href="#" class="btn"> Hire</a>
-                        <a href="#contact" class="btn">Contact</a>
-                    </div>                    
-            </div>
-            <div class="home-img">
-                <img src="Profile-Picture.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="education" id="education">
-            <h2 class="heading">Education</h2>
-
-            <div class="timeline-items">
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - Present</div>
-                    <div class="timeline-content">
-                        <h3><b>University</b></h3>
-                        <p> <em class="title">University of Education, Winneba.</em> <br>
-                            <em class="subtitle">BSc. in Information and Communication Technology Education</em> <br>
-                            
-                            Engaged in advanced courses in Java, C++, VB, C#, PHP, SQL, HTML, CSS, and JavaScript.
-                            Regularly taught colleagues these courses.
-                            Currently working on a project related to assistive technology.</p>
-                    </div>
-                    
-                </div>
-    
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                        <div class="timeline-date">2022 - Present</div>
-                        <div class="timeline-content">
-                            <h3>Internship</h3>
-                            <p> <em class="title">Ghana Education Service.</em> <br>
-                                <em class="subtitle">Subject Teacher.</em><br>
-                                I completed a teaching attachment at banda R/C JHS, I taught Computing
-                                and currently doing my Internship at Dambai College of Education (DACE)
-                            </p>
-                        </div>
-                    
-                </div>
-    
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                        <div class="timeline-date">2013 - 2016</div>
-                        <div class="timeline-content">
-                            <h3>Senior High School</h3>
-                            <p><em class="title">Krachi Senior High School.</em><br>
-                                Not only being regular and punctual I also Completed Krachi Senior High School with no bad record
-                            </p>
-                        </div>
-                    
-                </div>
-    
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                        <div class="timeline-date">2009 - 2012</div>
-                        <div class="timeline-content">
-                            <h3>Junior High School</h3>
-                            <p><em class="title">Banda English/Arabic JHS.</em><br>
-                                Excelled in core subjects including Mathematics and English. 
-                                Participated in extracurricular activities such as debate and sports.
-                            </p>
-                        </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <section class="services" id="services">
-            <h2 class="heading">What I Do</h2>
-
-            <div class="services-container">
-                
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Web Development</h4>
-                        <p> I create dynamic, responsive websites with HTML, 
-                            CSS, and JavaScript. My full-stack development skills 
-                            ensure aesthetically pleasing, functional solutions 
-                            with cross-browser compatibility and mobile responsiveness.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Software Engineering</h4>
-                        <p> My software engineering expertise encompasses designing, 
-                            developing, testing, and maintaining software applications. 
-                            I adhere to best practices such as agile methodologies, 
-                            version control with Git, and CI/CD pipelines.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Programming</h4>
-                        <p> With expertise in programming languages like Java, C++, 
-                            Visual Basic, and C#, I create robust and efficient 
-                            software solutions. My projects range from simple scripts 
-                            to complex systems, showcasing my problem-solving abilities through code.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Teaching</h4>
-                        <p> I am passionate about education and have taught 
-                            courses such as C++, VB, C#, Java, and web design to peers and students. 
-                            My experience includes conducting workshops and tutoring 
-                            sessions, simplifying complex concepts into understandable lessons.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Continuous Learning</h4>
-                        <p> I am committed to staying updated with the latest industry 
-                            trends and technologies. I regularly participate in online 
-                            courses, attend tech conferences, and engage in self-study 
-                            to continually improve my skill set.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Collaboration</h4>
-                        <p> I thrive in collaborative environments and have worked 
-                            with diverse teams on various projects. My communication 
-                            skills and teamwork make me an effective collaborator, 
-                            whether it's pairing with developers, designers, or clients.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="testimonials" id="testimonials">
-            <div class="testimonials-box">
-                <h2 class="heading">Testimonials</h2>
-                
-                <div class="wrapper">
-                    <div class="testimonial-item">
-                        <img src="BENEDICTA.jpeg" alt="">
-                        <h2>Benedicta Forson</h2>
-                        <em class="subtitle">Student at University of Education, Winneba</em>
-                        <div class="rating">
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                        </div>
-                        <p>Alex is a natural teacher. His ability to explain 
-                            difficult concepts in a clear and concise manner 
-                            has helped me immensely in understanding programming 
-                            and web development. His patience and dedication make 
-                            him an outstanding mentor.</p>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <img src="Angela-Moro.jpg" alt="">
-                        <h2>Angela Moro</h2>
-                        <em class="subtitle">Marketing Director at Creative Solutions</em>
-                        <div class="rating">
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                        </div>
-                        <p>As a web designer, Alex has a keen eye for detail and a 
-                            strong sense of aesthetics. The website he designed for 
-                            our company not only looks great but is also user-friendly 
-                            and responsive. We have received numerous compliments from 
-                            our clients.</p>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <img src="Kuvodo.jpg" alt="">
-                        <h2>Erasmus K. Tidore </h2>
-                        <em class="subtitle">CEO at NanaKing Computers</em>
-                        <div class="rating">
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                            <i class='bx bxs-star' id="star" ></i>
-                        </div>
-                        <p> Alex is not just a developer; he's a visionary. 
-                            His ability to foresee potential issues and address 
-                            them proactively has saved us a lot of time and resources. 
-                            His work ethic and professionalism are commendable.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="gallery" id="gallery">
-            <h2 class="heading">Gallery</h2>
-            <div class="gallery-container">
-
-                <div class="gallery-item">
-                    <video src="Video8.mp4" alt="Video 8" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Image 2">
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video1.MP4" alt="Video 1" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="Video2.MP4" alt="Video 2" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="Image1.jpg" alt="Image 1"></img>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video3.mp4" alt="Video 3" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video4.mp4" alt="Video 4" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video5.mp4" alt="Video 5" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video6.mp4" alt="Video 6" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video7.mp4" alt="Video 7" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video9.mp4" alt="Video 9" controls></video>
-                </div>
-
-                <div class="gallery-item">
-                    <video src="video10.mp4" alt="Video 10" controls></video>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2 class="heading">Let's <span>Connect</span></h2>
-            <div class="contact-content">
-                <p>
-                    I'm always excited to collaborate on new projects, share insights, 
-                    and learn from others in the tech community. Feel free to 
-                    explore my portfolio, and don't hesitate to reach out if 
-                    you'd like to discuss how we can work together to bring 
-                    your ideas to life.
-                </p>
-            </div>
-            <form id="contactForm">
-                <div class="input-group">
-                    <div class="input-box">
-                        <input type="text" id="fullName" placeholder="Full name" required>
-                        <input type="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" id="phoneNumber" placeholder="Phone Number" required pattern="^\d{10}$">
-                        <input type="text" id="subject" placeholder="Subject" required>
-                    </div>
-                </div>
-                <div class="input-group-2">
-                    <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                    <input type="submit" value="Send Message" class="btn">
-                </div>
-            </form>
-            
-        </section>
-
-        <footer class="footer">
-            <div class="social">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-youtube'></i></a>
-                <a href="#"><i class='bx bxl-tiktok' ></i></a>
-                <a href="#"><i class='bx bxl-facebook' ></i></a>
-                <a href="#"><i class='bx bxl-telegram' ></i></a>
-            </div>
-
-            <ul class="list">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#home">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-            <p class="copyright">
-                © GAF Tech | all Right Reserved
+            <p class="hero-description">
+              I develop web, mobile, and relational database systems for real-world workflows—from institutional school administration and classroom attendance to retail operations and academic analytics. Alongside software delivery, I support computing education as a Teaching Assistant at the University of Education, Winneba.
             </p>
-        </footer>
 
-        <script src="index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/lightbox.js@2.11.3/dist/lightbox.min.js"></script>
-        <script>
-            lightbox.init();
-        </script>
-    </body>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                Explore Selected Projects
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+              <a href="#case-studies" class="btn btn-secondary">
+                Read Flagship Case Studies
+              </a>
+              <a href="#contact" class="btn btn-subtle">
+                Contact Me &rarr;
+              </a>
+            </div>
 
+            <div class="hero-credentials">
+              <div class="credential-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span>Teaching Assistant @ UEW (2025–Present)</span>
+              </div>
+              <div class="credential-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>BSc. ICT in Education &middot; First Class Honours</span>
+              </div>
+              <div class="credential-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>Candidate &middot; MPhil ICT in Education</span>
+              </div>
+              <div class="credential-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Founder &amp; Lead &middot; GAF Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-wrapper">
+              <img src="ALEX FRIMPONG GYIWAH.jpg" alt="Portrait of Alex Frimpong Gyiwah" class="hero-image" width="380" height="437" loading="eager">
+              <div class="hero-floating-card">
+                <div class="floating-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="floating-text">
+                  <strong>Open for Collaboration</strong>
+                  <small>Software Projects &middot; Teaching &middot; Research</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. Selected Projects Catalogue
+         ==================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Portfolio Catalogue</span>
+          <h2 class="section-title">Selected Software Systems</h2>
+          <p class="section-subtitle">
+            Every project presented here reflects genuine problem solving, verifiable codebase architecture, and practical technical decisions for real users.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar" role="toolbar" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" type="button">All Projects (5)</button>
+          <button class="filter-btn" data-filter="education" type="button">Education &amp; Academics (3)</button>
+          <button class="filter-btn" data-filter="retail" type="button">Retail &amp; Business (1)</button>
+          <button class="filter-btn" data-filter="civic" type="button">Civic &amp; Utility (1)</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Flagship Project 1: SCAS -->
+          <article class="project-card flagship-card" data-category="education">
+            <div class="card-media">
+              <img src="assets/images/projects/scas-erd-full.png" alt="SCAS Complete Database Entity-Relationship Diagram showing 21 relational tables" class="card-img" loading="lazy">
+              <div class="card-media-overlay">
+                <span class="badge badge-verified">Flagship Technical Case Study</span>
+                <span class="badge badge-academic">Database Engineered</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Institutional Education &middot; Database Engineering</span>
+                <span class="badge badge-verified">47-Assertion Verified</span>
+              </div>
+              <h3 class="card-title">SCAS: Smart Classroom Attendance System</h3>
+              <p class="card-desc">
+                An institutional attendance enforcement platform featuring an advanced MariaDB relational engine (20 tables, 21 views, 14 functions, 42 procedures, 26 triggers) with database-enforced session rules, AES-256 encrypted teacher credentials, cryptographically bound time-expiring QR tokens, a PHP administration portal, and an Expo mobile companion.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">MariaDB / SQL</span>
+                <span class="tech-tag">Stored Procedures &amp; Triggers</span>
+                <span class="tech-tag">PHP 8+</span>
+                <span class="tech-tag">Expo / React Native</span>
+                <span class="tech-tag">AES-256 Encryption</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm" data-case-study="scas" type="button">
+                  Deep Case Study &rarr;
+                </button>
+                <a href="#case-studies" class="btn btn-subtle btn-sm">
+                  Inspect Architecture
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship Project 2: OmniPOS -->
+          <article class="project-card" data-category="retail">
+            <div class="card-media">
+              <img src="assets/images/projects/omnipos-desktop.png" alt="OmniPOS live till sign-in and POS interface" class="card-img" loading="lazy">
+              <div class="card-media-overlay">
+                <span class="badge badge-live">Live Production Demo</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Retail &middot; Multi-Branch POS</span>
+                <span class="badge badge-live">Verified Vercel Demo</span>
+              </div>
+              <h3 class="card-title">OmniPOS: Retail Operations Platform</h3>
+              <p class="card-desc">
+                A mobile-first retail register and inventory platform engineered for fast counter transactions, split payments, multi-store stock management, and zero-flash dark theme hydration before paint. Decoupled React PWA with Laravel/PostgreSQL backend.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">React (Vite PWA)</span>
+                <span class="tech-tag">Laravel PHP</span>
+                <span class="tech-tag">PostgreSQL / Neon</span>
+                <span class="tech-tag">TailwindCSS</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://omnipos-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Launch Live Demo &nearr;
+                </a>
+                <button class="btn btn-secondary btn-sm" data-case-study="omnipos" type="button">
+                  Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship Project 3: Ascenda -->
+          <article class="project-card" data-category="education">
+            <div class="card-media" style="display: flex; align-items: center; justify-content: center; background: #0c1424; padding: 2.5rem;">
+              <img src="assets/images/projects/ascenda-logo.png" alt="Ascenda School Management System Logo" style="max-height: 120px; object-fit: contain;" loading="lazy">
+              <div class="card-media-overlay">
+                <span class="badge badge-verified">RBAC Architecture</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">School Management &middot; Mobile App</span>
+                <span class="badge badge-academic">Supabase Postgres RLS</span>
+              </div>
+              <h3 class="card-title">Ascenda: School Management System</h3>
+              <p class="card-desc">
+                A mobile-first school management application built with React Native/Expo and Supabase PostgreSQL. Implements strict Row Level Security (RLS) across Super Admin, School Admin, Headmaster, and Teacher roles with automated continuous assessment (CA) scoring, A–F grading, and student promotion approval workflows.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">React Native / Expo</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">PostgreSQL RLS</span>
+                <span class="tech-tag">TypeScript</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm" data-case-study="ascenda" type="button">
+                  Deep Case Study &rarr;
+                </button>
+                <a href="#case-studies" class="btn btn-subtle btn-sm">
+                  Examine Role Security
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship Project 4: GPA Calculator -->
+          <article class="project-card" data-category="education">
+            <div class="card-media">
+              <img src="assets/images/projects/gpa-calculator-dark.png" alt="Live GPA Calculator dashboard with semester metrics and trend chart" class="card-img" loading="lazy">
+              <div class="card-media-overlay">
+                <span class="badge badge-live">Live Web App</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Academic Utility &middot; Open Source</span>
+                <span class="badge badge-verified">Public GitHub Repo</span>
+              </div>
+              <h3 class="card-title">GPA Calculator &amp; Performance Analytics</h3>
+              <p class="card-desc">
+                A responsive client-side academic tracker built for university students. Features credit-weighted GPA calculation, honours classification determination (First Class, Second Upper, etc.), interactive semester target trend charting, CSV data export, and print stylesheet.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">JavaScript (ES6+)</span>
+                <span class="tech-tag">gpa-core.js</span>
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">Local Storage</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://gyiwah.github.io/gpa-calculator/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Launch App &nearr;
+                </a>
+                <a href="https://github.com/Gyiwah/gpa-calculator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Code
+                </a>
+                <button class="btn btn-subtle btn-sm" data-case-study="gpa" type="button">
+                  Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Electo -->
+          <article class="project-card" data-category="civic">
+            <div class="card-media" style="display: flex; align-items: center; justify-content: center; background: #070e1c; padding: 2rem;">
+              <img src="assets/images/projects/scas-qr-sample.svg" alt="Electo Ballot and Verification Symbol" style="max-height: 110px; opacity: 0.85;" loading="lazy">
+              <div class="card-media-overlay">
+                <span class="badge badge-academic">Civic Technology</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Civic Tech &middot; Election Governance</span>
+                <span class="badge badge-verified">Synthetic Audit Model</span>
+              </div>
+              <h3 class="card-title">Electo: Election Management Platform</h3>
+              <p class="card-desc">
+                A secure election management and voter ballot platform developed with PHP 8+ and MySQL/MariaDB for student unions and associations. Features single-ballot casting enforcement, candidate management, tamper-evident audit logging, and synthetic mock verification.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP 8+</span>
+                <span class="tech-tag">MySQL / MariaDB</span>
+                <span class="tech-tag">Session Security</span>
+                <span class="tech-tag">Audit Trail</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm" data-case-study="electo" type="button">
+                  Security Model Details &rarr;
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. Flagship Case Studies Deep Dive
+         ==================================================================== -->
+    <section class="section case-studies-section" id="case-studies">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Engineering Rigour</span>
+          <h2 class="section-title">Flagship Case Studies</h2>
+          <p class="section-subtitle">
+            A deeper look at the problems addressed, architectural decisions made, security boundaries enforced, and test verification suites implemented.
+          </p>
+        </div>
+
+        <div class="case-study-showcase">
+          <!-- Deep Dive 1: SCAS -->
+          <div class="case-study-block">
+            <div class="cs-header">
+              <div class="cs-title-wrap">
+                <span class="section-eyebrow" style="margin-bottom: 0.5rem;">Database Architecture &middot; Case Study 01</span>
+                <h3>SCAS: Smart Classroom Attendance System</h3>
+              </div>
+              <div class="cs-meta-bar">
+                <span class="badge badge-verified">21 Relational Tables</span>
+                <span class="badge badge-verified">42 Stored Procedures</span>
+                <span class="badge badge-verified">26 Triggers</span>
+                <span class="badge badge-verified">47 Verification Assertions</span>
+              </div>
+            </div>
+
+            <div class="cs-layout-grid">
+              <div class="cs-narrative">
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    The Institutional Problem
+                  </h4>
+                  <p>
+                    In Ghanaian universities and secondary schools, paper attendance sheets are routinely passed around lecture halls with 200+ students. This results in rampant proxy attendance ("buddy punching"), missing record sheets, and weeks of delayed manual tallying when exam eligibility lists must be prepared.
+                  </p>
+                </div>
+
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Engineering &amp; Database Architecture Decisions
+                  </h4>
+                  <p>
+                    Rather than relying on client apps that can be intercepted or spoofed, SCAS pushes attendance validation into the relational database layer.
+                  </p>
+                  <ul style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.925rem;">
+                    <li>&bull; <strong>Strict SQL Procedures:</strong> Attendance is registered exclusively via stored procedures that enforce active lecture timetable windows, room allocation, and single-scan constraints within atomic transactions.</li>
+                    <li>&bull; <strong>Time-Expiring Disposable QR Tokens:</strong> QR codes projected on class screens rotate with time-limited cryptographic tokens. Taking a photo and sending it to an absent peer outside the classroom fails verification.</li>
+                    <li>&bull; <strong>Partitioned Historical Archive:</strong> Live scans hit an active session ledger (`attendance`), while completed term data is archived into partitioned tables (`attendance_archive`) to preserve sub-millisecond query execution.</li>
+                    <li>&bull; <strong>Sensitive Column Encryption:</strong> Staff personal identifiers and accounts are protected using AES-256 (`teacher_sensitive`).</li>
+                  </ul>
+                </div>
+
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Verification &amp; Test Suite
+                  </h4>
+                  <p>
+                    Documented with a comprehensive 47-assertion SQL test suite verifying edge cases: holiday schedule overrides, duplicate scan rejection, timetable collision prevention, and security audit log triggers.
+                  </p>
+                </div>
+
+                <div class="cs-evidence-metrics">
+                  <div class="metric-card">
+                    <span class="metric-num">21</span>
+                    <span class="metric-label">Tables</span>
+                  </div>
+                  <div class="metric-card">
+                    <span class="metric-num">42</span>
+                    <span class="metric-label">Procedures</span>
+                  </div>
+                  <div class="metric-card">
+                    <span class="metric-num">26</span>
+                    <span class="metric-label">Triggers</span>
+                  </div>
+                  <div class="metric-card">
+                    <span class="metric-num">47</span>
+                    <span class="metric-label">Test Assertions</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cs-visual-column">
+                <div class="cs-diagram-frame">
+                  <img src="assets/images/projects/scas-erd-full.png" alt="SCAS Complete Database Schema Entity-Relationship Diagram" data-case-study="scas">
+                  <div class="cs-caption">
+                    <span>Figure 1: Full SCAS Entity-Relationship Architecture</span>
+                    <button class="btn btn-subtle btn-sm" data-case-study="scas" type="button">Enlarge View &rarr;</button>
+                  </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem;">
+                  <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Documented Limitations &amp; Next Steps</h5>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    Verified on MariaDB 10.6+ / MySQL 8. Mobile client companion (Expo) requires validated camera permissions and local school server HTTPS configuration. Next milestone: integrating geofencing radius validation for large campus lecture theatres.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deep Dive 2: OmniPOS -->
+          <div class="case-study-block">
+            <div class="cs-header">
+              <div class="cs-title-wrap">
+                <span class="section-eyebrow" style="margin-bottom: 0.5rem;">Retail Systems &middot; Case Study 02</span>
+                <h3>OmniPOS: High-Performance Retail &amp; Till System</h3>
+              </div>
+              <div class="cs-meta-bar">
+                <span class="badge badge-live">Live Public Demo</span>
+                <span class="badge badge-verified">React PWA Frontend</span>
+                <span class="badge badge-verified">PostgreSQL Backend</span>
+              </div>
+            </div>
+
+            <div class="cs-layout-grid">
+              <div class="cs-narrative">
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Retail Ergonomics &amp; Checkout Latency
+                  </h4>
+                  <p>
+                    Behind a busy retail counter, cashiers cannot wait for multi-second page loads or clunky modal popups. Even a fraction of a second of latency per barcode scan leads to long customer queues and lost sales.
+                  </p>
+                </div>
+
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Key Architecture &amp; Implementation Decisions
+                  </h4>
+                  <p>
+                    OmniPOS was designed as a lightweight Progressive Web App (PWA) with immediate visual response:
+                  </p>
+                  <ul style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.925rem;">
+                    <li>&bull; <strong>Pre-Paint Theme Script:</strong> Implemented a tiny zero-dependency script executed directly in `<head>` before the bundle paints. If a till is set to dark mode, it never flashes white upon booting behind the counter.</li>
+                    <li>&bull; <strong>Decoupled Architecture:</strong> Frontend runs on React + Vite for sub-100ms UI interaction, while business logic and multi-branch stock reconciliation are handled via a REST API with PostgreSQL/Neon database persistence.</li>
+                    <li>&bull; <strong>Cart Calculation Engine:</strong> Pure in-memory calculation handles taxes, line item discounts, and split payments without requiring round-trip API latency for each item added.</li>
+                  </ul>
+                </div>
+
+                <div class="cs-section-box">
+                  <h4>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Live Demo &amp; Verification Note
+                  </h4>
+                  <p>
+                    A live till demonstration is deployed and accessible at <strong>omnipos-three.vercel.app</strong>. For security best practices, shared administrative passwords are intentionally omitted from public documentation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cs-visual-column">
+                <div class="cs-diagram-frame">
+                  <img src="assets/images/projects/omnipos-desktop.png" alt="OmniPOS live register sign-in till interface" data-case-study="omnipos">
+                  <div class="cs-caption">
+                    <span>Figure 2: OmniPOS Live Register Interface</span>
+                    <a href="https://omnipos-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-subtle btn-sm">Launch Live Demo &nearr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. About Me & Professional Philosophy
+         ==================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="about-card">
+              <img src="Image1.jpg" alt="Alex Frimpong Gyiwah instructing computing students in the UEW laboratory" class="about-photo" width="400" height="500" loading="lazy">
+              <div class="about-quote-box">
+                &ldquo;Teaching technology forces you to understand it at the deepest possible level. If you cannot explain an architecture simply to students, it is probably over-complicated in code.&rdquo;
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <span class="section-eyebrow">Professional Profile</span>
+            <h2 class="section-title">The Intersection of Software Development &amp; Computing Education</h2>
+            
+            <p>
+              I am a software developer and ICT educator based in Winneba, Ghana. My work spans the full software development lifecycle—from conceptualizing relational database schemas and building mobile applications to deploying cloud utilities.
+            </p>
+
+            <p>
+              Having earned a <strong>First Class Honours BSc. in Information and Communication Technology Education</strong> from the University of Education, Winneba (UEW), I currently serve as a <strong>Teaching Assistant</strong> in the Department of ICT Education while pursuing my <strong>Master of Philosophy (MPhil)</strong> in ICT Education.
+            </p>
+
+            <p>
+              This dual focus defines my engineering philosophy. When building institutional systems like SCAS or Ascenda, I understand educational pain points firsthand. When teaching university students programming in C++, Java, PHP, and Web Technologies, I translate production-grade software principles into accessible, step-by-step learning.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h5>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Clean Architecture
+                </h5>
+                <p>Prioritizing strict database integrity, modular decoupling, and verifiable security boundaries.</p>
+              </div>
+              <div class="highlight-box">
+                <h5>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  Pedagogical Clarity
+                </h5>
+                <p>Equipping students with algorithmic intuition, debugging methodology, and sound development habits.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. Experience & Education Timeline
+         ==================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Career &amp; Academic Journey</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
+          <p class="section-subtitle">
+            A chronological timeline of verified professional responsibilities, academic achievements, and institutional service.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: Teaching Assistant -->
+          <div class="timeline-entry">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <h3 class="timeline-role">Teaching Assistant</h3>
+                <span class="timeline-date">2025 &ndash; Present</span>
+              </div>
+              <div class="timeline-org">Department of ICT Education &middot; University of Education, Winneba (UEW)</div>
+              <p class="timeline-desc">
+                Facilitating computing laboratory instruction and practical programming tutorials in C++, Java, PHP, SQL, and Web Development for undergraduate student cohorts. Assisting faculty with course administration, project reviews, and student technical mentorship.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Laboratory Instruction</span>
+                <span class="tech-tag">Object-Oriented Programming</span>
+                <span class="tech-tag">Database Systems</span>
+                <span class="tech-tag">Undergraduate Mentorship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: MPhil ICT Education -->
+          <div class="timeline-entry">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <h3 class="timeline-role">Candidate &middot; MPhil in ICT Education</h3>
+                <span class="timeline-date">2025 &ndash; Present</span>
+              </div>
+              <div class="timeline-org">School of Graduate Studies &middot; University of Education, Winneba</div>
+              <p class="timeline-desc">
+                Conducting postgraduate research into educational software systems, digital participation, computing pedagogy, and assistive technological frameworks for learning.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Educational Technology</span>
+                <span class="tech-tag">Curriculum Research</span>
+                <span class="tech-tag">Digital Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: GAF Tech -->
+          <div class="timeline-entry">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <h3 class="timeline-role">Founder &amp; Lead Software Developer</h3>
+                <span class="timeline-date">2022 &ndash; Present</span>
+              </div>
+              <div class="timeline-org">GAF Tech</div>
+              <p class="timeline-desc">
+                Architecting practical software applications including educational portals (Ascenda), attendance platforms (SCAS), point-of-sale platforms (OmniPOS), and academic utilities (GPA Calculator). Directing UI/UX design, database modeling, and client delivery.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Full-Stack Architecture</span>
+                <span class="tech-tag">React / React Native</span>
+                <span class="tech-tag">MariaDB &amp; PostgreSQL</span>
+                <span class="tech-tag">System Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: BSc. ICT in Education -->
+          <div class="timeline-entry">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <h3 class="timeline-role">BSc. in Information &amp; Communication Technology Education</h3>
+                <span class="timeline-date">2021 &ndash; 2025</span>
+              </div>
+              <div class="timeline-org">University of Education, Winneba (UEW)</div>
+              <p class="timeline-desc">
+                Graduated with <strong>First Class Honours</strong>. Completed extensive coursework across Data Structures, Algorithms, Software Engineering, Database Systems, Computer Networks, and Instructional System Design. Consistently organized peer tutorials for programming courses.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">First Class Honours</span>
+                <span class="tech-tag">Software Engineering</span>
+                <span class="tech-tag">Database Management</span>
+                <span class="tech-tag">Computing Pedagogy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Teaching Attachment / Internship -->
+          <div class="timeline-entry">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <h3 class="timeline-role">Teaching Internship &amp; Attachment</h3>
+                <span class="timeline-date">2022 &ndash; 2024</span>
+              </div>
+              <div class="timeline-org">Ghana Education Service (Banda R/C JHS &middot; Dambai College of Education)</div>
+              <p class="timeline-desc">
+                Instructed junior high school and college students in Computing, digital literacy, and basic algorithmic problem solving, designing practical lesson plans and assessments.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Classroom Teaching</span>
+                <span class="tech-tag">Computing Curriculum</span>
+                <span class="tech-tag">Student Assessment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. Teaching, Mentorship & Impact
+         ==================================================================== -->
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Community &amp; Instruction</span>
+          <h2 class="section-title">Teaching, Mentorship &amp; Impact</h2>
+          <p class="section-subtitle">
+            Beyond writing software, I am deeply committed to equipping the next generation of technologists and students with strong computational foundations.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-media">
+              <img src="Image2.jpg" alt="Alex Frimpong Gyiwah conducting a laboratory tutorial session with university students" class="impact-img" loading="lazy">
+            </div>
+            <div class="impact-body">
+              <span class="impact-tag">University Instruction</span>
+              <h3 class="impact-title">Computing Laboratory Sessions</h3>
+              <p class="impact-text">
+                Hands-on laboratory sessions at UEW focusing on coding fundamentals in C++, Java, and Web Development. Students learn to trace code execution, debug errors systematically, and translate conceptual problems into functioning software.
+              </p>
+            </div>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-media">
+              <img src="Image1.jpg" alt="Students engaged in collaborative computer programming session" class="impact-img" loading="lazy">
+            </div>
+            <div class="impact-body">
+              <span class="impact-tag">Community Outreach</span>
+              <h3 class="impact-title">BECE Candidates Vacation Classes</h3>
+              <p class="impact-text">
+                Organized and conducted free vacation classes in Computing and Mathematics for Basic Education Certificate Examination (BECE) candidates in Banda, bridging foundational gaps before secondary school admission.
+              </p>
+            </div>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-media" style="display: flex; align-items: center; justify-content: center; background: #0c1527; padding: 2rem;">
+              <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="impact-body">
+              <span class="impact-tag">Peer Mentorship</span>
+              <h3 class="impact-title">Study Groups &amp; Code Reviews</h3>
+              <p class="impact-text">
+                Formed and led peer study circles throughout undergraduate study, helping course peers master complex concepts such as relational normalization, object-oriented design patterns, and full-stack integration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. Technical Skills Matrix
+         ==================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Verified Capabilities</span>
+          <h2 class="section-title">Technical Skills &amp; Proficiencies</h2>
+          <p class="section-subtitle">
+            Technologies actively applied across shipped software projects, database architectures, and academic instruction.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h4>Programming Languages</h4>
+            </div>
+            <div class="skill-pill-list">
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">PHP 8+</span>
+              <span class="skill-pill">SQL (ANSI / MariaDB)</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h4>Frontend &amp; Mobile</h4>
+            </div>
+            <div class="skill-pill-list">
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">React Native / Expo</span>
+              <span class="skill-pill">Progressive Web Apps (PWA)</span>
+              <span class="skill-pill">Vite</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">TailwindCSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </div>
+              <h4>Database &amp; Backend</h4>
+            </div>
+            <div class="skill-pill-list">
+              <span class="skill-pill">MariaDB / MySQL</span>
+              <span class="skill-pill">PostgreSQL / Supabase</span>
+              <span class="skill-pill">Stored Procedures</span>
+              <span class="skill-pill">Database Triggers</span>
+              <span class="skill-pill">Relational Schema Design</span>
+              <span class="skill-pill">Laravel (PHP)</span>
+              <span class="skill-pill">RESTful API Design</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h4>Security &amp; Engineering</h4>
+            </div>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Row Level Security (RLS)</span>
+              <span class="skill-pill">AES-256 Encryption</span>
+              <span class="skill-pill">Audit Trail Logging</span>
+              <span class="skill-pill">Cryptographic QR Tokens</span>
+              <span class="skill-pill">Git / GitHub Workflow</span>
+              <span class="skill-pill">Automated SQL Assertions</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <h4>Instruction &amp; Pedagogy</h4>
+            </div>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Laboratory Demonstration</span>
+              <span class="skill-pill">Curriculum Delivery</span>
+              <span class="skill-pill">Continuous Assessment Design</span>
+              <span class="skill-pill">Algorithmic Problem Solving</span>
+              <span class="skill-pill">Technical Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. Verified Testimonials
+         ==================================================================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Recommendations</span>
+          <h2 class="section-title">Verified Testimonials</h2>
+          <p class="section-subtitle">
+            Feedback from students, institutional colleagues, and collaborators on instruction and project execution.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              &ldquo;Alex is a natural teacher. His ability to explain difficult concepts in a clear and concise manner has helped me immensely in understanding programming and web development. His patience and dedication make him an outstanding mentor.&rdquo;
+            </div>
+            <div class="testimonial-author">
+              <img src="BENEDICTA.jpeg" alt="Benedicta Forson" class="author-avatar" width="50" height="50" loading="lazy">
+              <div class="author-info">
+                <h5>Benedicta Forson</h5>
+                <span>Student &middot; University of Education, Winneba</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              &ldquo;As a developer, Alex has a keen eye for detail and a strong sense of user-centered design. The applications he develops are responsive, visually clean, and built on reliable database foundations. We have received numerous compliments from users.&rdquo;
+            </div>
+            <div class="testimonial-author">
+              <img src="Angela-Moro.jpg" alt="Angela Moro" class="author-avatar" width="50" height="50" loading="lazy">
+              <div class="author-info">
+                <h5>Angela Moro</h5>
+                <span>Director &middot; Creative Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              &ldquo;Alex is not just a programmer; he thinks ahead about system architecture and edge cases. His ability to foresee potential issues and address them proactively has saved significant time and resources. His professionalism is commendable.&rdquo;
+            </div>
+            <div class="testimonial-author">
+              <img src="Kuvodo.jpg" alt="Erasmus K. Tidore" class="author-avatar" width="50" height="50" loading="lazy">
+              <div class="author-info">
+                <h5>Erasmus K. Tidore</h5>
+                <span>CEO &middot; NanaKing Computers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. Contact Section
+         ==================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <span class="section-eyebrow">Get in Touch</span>
+            <h3>Let&rsquo;s discuss a project or educational collaboration.</h3>
+            <p>
+              Whether you are an institution exploring educational software, a business seeking custom system development, or a fellow educator looking to collaborate, I welcome your message.
+            </p>
+
+            <div class="contact-links-list">
+              <div class="contact-channel" id="copyEmailBtn" style="cursor: pointer;" title="Click to copy email address">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <strong>Direct Email (Click to Copy)</strong>
+                  <span>alexfrimpong9@gmail.com</span>
+                </div>
+              </div>
+
+              <a href="https://github.com/Gyiwah" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <strong>GitHub Profile</strong>
+                  <span>github.com/Gyiwah</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/alex-frimpong-gyiwah" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <strong>LinkedIn</strong>
+                  <span>linkedin.com/in/alex-frimpong-gyiwah</span>
+                </div>
+              </a>
+
+              <div class="contact-channel">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <strong>Base Location</strong>
+                  <span>Winneba / Central Region, Ghana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h4 style="font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem;">
+              Send a Direct Message
+            </h4>
+
+            <div id="formAlert" class="form-alert" role="alert"></div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="fullName" class="form-label">Your Name *</label>
+                <input type="text" id="fullName" class="form-input" placeholder="e.g. Samuel Mensah" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" class="form-input" placeholder="e.g. samuel@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" id="subject" class="form-input" placeholder="e.g. Educational System Consultation / Teaching Inquiry" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" class="form-textarea" placeholder="How can I assist you with your project or institution?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Send Message &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       11. Site Footer
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Alex Frimpong Gyiwah</h4>
+          <p>
+            Software Developer and ICT Educator engineering practical web, mobile, and relational database systems for education and commerce.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">
+            GAF Tech &middot; Winneba, Ghana
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Flagship Work</h5>
+          <ul>
+            <li><a href="#projects">SCAS Attendance</a></li>
+            <li><a href="#projects">OmniPOS Retail</a></li>
+            <li><a href="#projects">Ascenda School MS</a></li>
+            <li><a href="#projects">GPA Calculator</a></li>
+            <li><a href="#projects">Electo Voting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Profile</h5>
+          <ul>
+            <li><a href="#about">About &amp; Philosophy</a></li>
+            <li><a href="#experience">Experience &amp; Roles</a></li>
+            <li><a href="#impact">Teaching &amp; Outreach</a></li>
+            <li><a href="#skills">Skills Matrix</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="mailto:alexfrimpong9@gmail.com">Direct Email</a></li>
+            <li><a href="https://github.com/Gyiwah" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/alex-frimpong-gyiwah" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#home">Back to Top &uarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Alex Frimpong Gyiwah (GAF Tech). All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: var(--text-faint);">
+          Hosted statically on GitHub Pages &middot; Built with modern semantic HTML, CSS &amp; vanilla JS
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       12. Interactive Case Study Modal
+       ====================================================================== -->
+  <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" type="button" aria-label="Close case study details">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modalBody">
+        <!-- Injected dynamically by index.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
 </html>

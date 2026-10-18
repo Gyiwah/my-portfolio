@@ -1,0 +1,17 @@
+# Node & Package Manager
+node_modules/
+package-lock.json
+
+# Scratch scripts & temporary tests
+test_*.png
+test_*.cjs
+inspect_links.py
+capture.cjs
+portfolio_*_test.png
+portfolio_fullpage.png
+omnipos_full.png
+
+# Backups
+*.old.*
+brief.txt
+instructions.txt
