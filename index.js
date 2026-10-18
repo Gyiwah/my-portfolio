@@ -4,13 +4,66 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initHeader();
   initMobileMenu();
   initProjectFilters();
+  initGpaSandbox();
   initCaseStudyModal();
   initContactForm();
   initSmoothScroll();
 });
+
+/* --------------------------------------------------------------------------
+   0. Dark / Light Theme Engine
+   -------------------------------------------------------------------------- */
+function initTheme() {
+  const toggleBtn = document.querySelector('#themeToggleBtn');
+  const sunIcon = toggleBtn ? toggleBtn.querySelector('.sun-icon') : null;
+  const moonIcon = toggleBtn ? toggleBtn.querySelector('.moon-icon') : null;
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('gyiwah_theme');
+    if (saved) return saved;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      if (sunIcon && moonIcon) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-label', 'Switch to dark theme');
+        toggleBtn.setAttribute('title', 'Switch to dark theme');
+      }
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (sunIcon && moonIcon) {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-label', 'Switch to light theme');
+        toggleBtn.setAttribute('title', 'Switch to light theme');
+      }
+    }
+  }
+
+  const currentTheme = getPreferredTheme();
+  applyTheme(currentTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const active = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const next = active === 'light' ? 'dark' : 'light';
+      localStorage.setItem('gyiwah_theme', next);
+      applyTheme(next);
+    });
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. Header Scroll & Active Section Spy
@@ -128,6 +181,147 @@ function initProjectFilters() {
       });
     });
   });
+}
+
+/* --------------------------------------------------------------------------
+   3.5. GPA Calculator Interactive Sandbox Engine
+   -------------------------------------------------------------------------- */
+function initGpaSandbox() {
+  const tableBody = document.querySelector('#sandboxTableBody');
+  const addBtn = document.querySelector('#sandboxAddCourseBtn');
+  const resetBtn = document.querySelector('#sandboxResetBtn');
+  const gpaValue = document.querySelector('#sandboxGpaValue');
+  const classification = document.querySelector('#sandboxClassification');
+  const totalCreditsEl = document.querySelector('#sandboxTotalCredits');
+  const totalPointsEl = document.querySelector('#sandboxTotalPoints');
+
+  if (!tableBody || !gpaValue) return;
+
+  const defaultCourses = [
+    { code: 'ICT 311: Data Structures', credits: 3, grade: '4.0' },
+    { code: 'ICT 312: Database Systems', credits: 3, grade: '4.0' },
+    { code: 'ICT 313: OOP with Java', credits: 3, grade: '3.5' },
+    { code: 'EDU 314: Instructional Design', credits: 2, grade: '4.0' }
+  ];
+
+  function renderRow(course, index) {
+    const tr = document.createElement('tr');
+    tr.dataset.row = index + 1;
+    tr.innerHTML = `
+      <td><input type="text" class="sandbox-input course-code" value="${course.code}" aria-label="Course Title"></td>
+      <td>
+        <select class="sandbox-select course-credits" aria-label="Course Credits">
+          <option value="1" ${course.credits === 1 ? 'selected' : ''}>1 Credit</option>
+          <option value="2" ${course.credits === 2 ? 'selected' : ''}>2 Credits</option>
+          <option value="3" ${course.credits === 3 ? 'selected' : ''}>3 Credits</option>
+          <option value="4" ${course.credits === 4 ? 'selected' : ''}>4 Credits</option>
+        </select>
+      </td>
+      <td>
+        <select class="sandbox-select course-grade" aria-label="Course Grade">
+          <option value="4.0" ${course.grade === '4.0' ? 'selected' : ''}>A (4.0 &middot; 80-100%)</option>
+          <option value="3.5" ${course.grade === '3.5' ? 'selected' : ''}>B+ (3.5 &middot; 75-79%)</option>
+          <option value="3.0" ${course.grade === '3.0' ? 'selected' : ''}>B (3.0 &middot; 70-74%)</option>
+          <option value="2.5" ${course.grade === '2.5' ? 'selected' : ''}>C+ (2.5 &middot; 65-69%)</option>
+          <option value="2.0" ${course.grade === '2.0' ? 'selected' : ''}>C (2.0 &middot; 60-64%)</option>
+          <option value="1.5" ${course.grade === '1.5' ? 'selected' : ''}>D+ (1.5 &middot; 55-59%)</option>
+          <option value="1.0" ${course.grade === '1.0' ? 'selected' : ''}>D (1.0 &middot; 50-54%)</option>
+          <option value="0.0" ${course.grade === '0.0' ? 'selected' : ''}>E (0.0 &middot; Fail)</option>
+        </select>
+      </td>
+      <td style="text-align: center;">
+        <button type="button" class="sandbox-delete-btn" title="Remove course" aria-label="Remove Course" style="background: transparent; border: none; color: var(--text-faint); cursor: pointer; padding: 4px;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+        </button>
+      </td>
+    `;
+    return tr;
+  }
+
+  function calculateGPA() {
+    const rows = tableBody.querySelectorAll('tr');
+    let totalCredits = 0;
+    let totalPoints = 0;
+
+    rows.forEach(row => {
+      const creditsEl = row.querySelector('.course-credits');
+      const gradeEl = row.querySelector('.course-grade');
+      if (creditsEl && gradeEl) {
+        const credits = parseFloat(creditsEl.value) || 0;
+        const gradePoint = parseFloat(gradeEl.value) || 0;
+        totalCredits += credits;
+        totalPoints += (credits * gradePoint);
+      }
+    });
+
+    const gpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+    gpaValue.textContent = gpa.toFixed(2);
+    if (totalCreditsEl) totalCreditsEl.textContent = totalCredits;
+    if (totalPointsEl) totalPointsEl.textContent = totalPoints.toFixed(2);
+
+    if (classification) {
+      if (gpa >= 3.60) {
+        classification.textContent = 'First Class Honours';
+        classification.className = 'badge badge-verified';
+      } else if (gpa >= 3.00) {
+        classification.textContent = 'Second Class Upper Division';
+        classification.className = 'badge badge-live';
+      } else if (gpa >= 2.50) {
+        classification.textContent = 'Second Class Lower Division';
+        classification.className = 'badge badge-academic';
+      } else if (gpa >= 2.00) {
+        classification.textContent = 'Third Class';
+        classification.className = 'badge';
+      } else if (gpa >= 1.00) {
+        classification.textContent = 'Pass';
+        classification.className = 'badge';
+      } else {
+        classification.textContent = 'Fail / Unsatisfactory';
+        classification.className = 'badge';
+      }
+    }
+  }
+
+  tableBody.addEventListener('change', calculateGPA);
+  tableBody.addEventListener('input', calculateGPA);
+
+  tableBody.addEventListener('click', (e) => {
+    const deleteBtn = e.target.closest('.sandbox-delete-btn');
+    if (deleteBtn) {
+      const row = deleteBtn.closest('tr');
+      const allRows = tableBody.querySelectorAll('tr');
+      if (allRows.length > 1) {
+        row.remove();
+      } else {
+        row.querySelector('.course-code').value = 'New Course';
+        row.querySelector('.course-credits').value = '3';
+        row.querySelector('.course-grade').value = '4.0';
+      }
+      calculateGPA();
+    }
+  });
+
+  if (addBtn) {
+    addBtn.addEventListener('click', () => {
+      const count = tableBody.querySelectorAll('tr').length + 1;
+      const newTr = renderRow({ code: `Elective ${count}`, credits: 3, grade: '4.0' }, count);
+      tableBody.appendChild(newTr);
+      calculateGPA();
+      newTr.querySelector('.course-code').focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      tableBody.innerHTML = '';
+      defaultCourses.forEach((c, idx) => {
+        tableBody.appendChild(renderRow(c, idx));
+      });
+      calculateGPA();
+    });
+  }
+
+  calculateGPA();
 }
 
 /* --------------------------------------------------------------------------

@@ -13,22 +13,32 @@ The portfolio website has been completely reimagined and rebuilt from the ground
 
 ### Core Enhancements Delivered:
 1. **Clear Professional Positioning:** Replaced generic "GAF" branding with the owner's full professional name: **Alex Frimpong Gyiwah**, positioned distinctly as a **Software Developer & ICT Educator**.
-2. **Flagship Technical Case Studies:** 
+2. **Hero Section & Glowing Visual Portal:**
+   - Isolated clean-cut portrait (`Profile.png` in professional white shirt and tie) inside a glowing cyan glassmorphism portal.
+   - Dual floating tech orbits highlighting verifiable achievements: `MariaDB & SQL Architect` (`21 Tables · 42 Procedures`) and `UEW Teaching Assistant` (`Dept. of ICT Education`).
+   - Quick Proof & Scale Ribbon showcasing 4 verified scale numbers (`21+ Relational Tables`, `42 Stored Procedures`, `47 Test Assertions`, `4.00 Credit-Weighted GPA Engine`).
+3. **Live Interactive GPA Calculator Sandbox Widget:**
+   - Directly embeds Alex's pure JavaScript academic grading engine (`gpa-core.js`) into the portfolio page.
+   - Allows visitors and recruiters to interactively add/delete courses, modify credits (1–4), and select grades (A to E).
+   - Dynamically calculates GPA, honors degree classification (First Class, Second Upper, etc.), total credits, and total grade points in real time.
+4. **Authentic Laboratory Video Showcase (Undeniable Proof of Teaching):**
+   - Embedded HTML5 video player featuring authentic footage of Alex instructing university students at the laboratory whiteboard in the Department of ICT Education at UEW (`video1.MP4`).
+   - Accompanied by authentic classroom photographs (`Image1.jpg`, `Image2.jpg`).
+5. **Theme Engine with Persistence:**
+   - Seamless Dark / Light theme toggle button (`#themeToggleBtn`) with SVG sun/moon animation and `localStorage` persistence (`gyiwah_theme`).
+6. **Flagship Technical Case Studies:** 
    - **SCAS (Smart Classroom Attendance System):** Full technical showcase of the 21-table relational schema, 42 stored procedures, 26 triggers, 47-assertion verification suite, and QR cryptographic token lifecycle. Real full-resolution ERD diagram included.
    - **OmniPOS (Retail & Multi-Branch POS Platform):** Highlights the mobile-first React PWA till interface, pre-paint flash-free dark theme execution in `<head>`, and live demo link.
    - **Ascenda (School Management System):** Role-based access control (RBAC) across Super Admin, School Admin, Headmaster, and Teacher roles with automated continuous assessment (CA) scoring and promotion workflows.
    - **GPA Calculator & Performance Analytics:** Pure JavaScript calculation engine (`gpa-core.js`), honours classification thresholds, CSV export, print styles, and dark/light modes.
    - **Electo (Election Management Platform):** Civic technology model for single-ballot voting and tamper-resistant audit logs.
-3. **Verified Experience & Academic Credentials:**
+7. **Verified Experience & Academic Credentials:**
    - Teaching Assistant @ Department of ICT Education, University of Education, Winneba (UEW, 2025–Present).
    - Candidate, MPhil in ICT Education, UEW (2025–Present).
    - Founder & Lead Developer, GAF Tech (2022–Present).
    - BSc. ICT in Education, University of Education, Winneba (2021–2025), graduated with **First Class Honours**.
-4. **Authentic Teaching & Mentorship Evidence:**
-   - Features authentic photographs of Alex instructing computing students in the laboratory at UEW (`Image1.jpg`, `Image2.jpg`).
-   - Highlights community BECE vacation classes in Computing and Mathematics in Banda.
-5. **Modern Visual Design System:**
-   - Premium editorial dark mode (`#080c15` foundation, restrained `#06b6d4` cyan/teal accent).
+8. **Modern Visual Design System:**
+   - Premium editorial dark mode (`#060913` foundation, restrained `#06b6d4` cyan/teal accent).
    - Responsive typography with Google Fonts `Plus Jakarta Sans` and `JetBrains Mono`.
    - WCAG AA compliant contrast ratios and visible keyboard focus states (`:focus-visible`).
    - Dynamic project category filtering (`All`, `Education`, `Retail`, `Civic`).
