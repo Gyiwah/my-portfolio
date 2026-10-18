@@ -10,6 +10,8 @@ capture.cjs
 portfolio_*_test.png
 portfolio_fullpage.png
 omnipos_full.png
+shot_*.png
+*.docx
 
 # Backups
 *.old.*
