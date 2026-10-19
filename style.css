@@ -429,13 +429,13 @@ a {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.15rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.05rem;
   list-style: none;
 }
 
@@ -508,7 +508,7 @@ a {
    -------------------------------------------------------------------------- */
 .hero {
   padding-top: calc(var(--nav-height) + clamp(2.5rem, 5vw, 4.5rem));
-  padding-bottom: clamp(4rem, 6vw, 6.5rem);
+  padding-bottom: clamp(4.5rem, 6vw, 6.5rem);
   position: relative;
 }
 
@@ -585,7 +585,12 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions .btn {
+  min-height: 3.5rem;
+  padding-inline: 1.65rem;
 }
 
 .hero-credentials {
@@ -850,6 +855,45 @@ a {
   transition: transform var(--transition-slow);
 }
 
+.card-img--dashboard {
+  object-position: top;
+}
+
+.project-card:not(.flagship-card) .card-media--dashboard {
+  height: 280px;
+  min-height: 280px;
+}
+
+.card-media > picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.card-media > picture .card-img {
+  display: block;
+}
+
+.card-media--device-preview {
+  display: flex;
+  height: 280px;
+  min-height: 280px;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #1b1931 0%, #070b16 72%);
+}
+
+.card-media--device-preview .card-img {
+  width: auto;
+  height: calc(100% - 1.5rem);
+  max-width: 45%;
+  aspect-ratio: 0.46;
+  object-fit: cover;
+  border: 4px solid #29233d;
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-lg);
+}
+
 .project-card:hover .card-img {
   transform: scale(1.035);
 }
@@ -863,6 +907,10 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   pointer-events: none;
+}
+
+.card-media--dashboard .card-media-overlay {
+  display: none;
 }
 
 .card-body {

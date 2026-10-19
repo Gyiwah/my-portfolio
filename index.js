@@ -50,6 +50,8 @@ function initTheme() {
         toggleBtn.setAttribute('title', 'Switch to light theme');
       }
     }
+
+    syncProjectScreenshotTheme(theme);
   }
 
   const currentTheme = getPreferredTheme();
@@ -63,6 +65,18 @@ function initTheme() {
       applyTheme(next);
     });
   }
+}
+
+function syncProjectScreenshotTheme(theme) {
+  const mode = theme === 'light' ? 'light' : 'dark';
+
+  document.querySelectorAll('img[data-light-src][data-dark-src]').forEach((image) => {
+    image.src = image.dataset[`${mode}Src`];
+  });
+
+  document.querySelectorAll('source[data-light-srcset][data-dark-srcset]').forEach((source) => {
+    source.srcset = source.dataset[`${mode}Srcset`];
+  });
 }
 
 /* --------------------------------------------------------------------------

@@ -57,15 +57,12 @@
         <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main Navigation">
           <ul class="nav-links">
             <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#sandbox" class="nav-link">GPA Sandbox</a></li>
             <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#impact" class="nav-link">Teaching &amp; Impact</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
-          <a href="#contact" class="btn btn-primary btn-sm">Get in touch</a>
+          <a href="#contact" class="btn btn-primary btn-sm">Let’s talk</a>
         </nav>
 
         <!-- Theme Toggle Button -->
@@ -129,10 +126,7 @@
                 </svg>
               </a>
               <a href="#sandbox" class="btn btn-secondary">
-                Try Live GPA Sandbox &darr;
-              </a>
-              <a href="#case-studies" class="btn btn-subtle">
-                Technical Case Studies &rarr;
+                Try the GPA Sandbox
               </a>
             </div>
 
@@ -249,8 +243,8 @@
         <div class="projects-grid">
           <!-- Flagship Project 1: SCAS -->
           <article class="project-card flagship-card" data-category="education">
-            <div class="card-media">
-              <img src="assets/images/projects/scas-erd-full.png" alt="SCAS Complete Database Entity-Relationship Diagram showing 21 relational tables" class="card-img" loading="lazy">
+            <div class="card-media card-media--dashboard">
+              <img src="assets/images/projects/scas-dashboard.webp" data-light-src="assets/images/projects/scas-dashboard.webp" data-dark-src="assets/images/projects/scas-dashboard.webp" alt="SCAS administration dashboard with synthetic daily attendance metrics and a redacted administrator name" class="card-img card-img--dashboard" loading="lazy">
               <div class="card-media-overlay">
                 <span class="badge badge-verified">Flagship Technical Case Study</span>
                 <span class="badge badge-academic">Database Engineered</span>
@@ -285,10 +279,10 @@
 
           <!-- Flagship Project 2: OmniPOS -->
           <article class="project-card" data-category="retail">
-            <div class="card-media">
-              <img src="assets/images/projects/omnipos-desktop.png" alt="OmniPOS live till sign-in and POS interface" class="card-img" loading="lazy">
+            <div class="card-media card-media--dashboard">
+              <img src="assets/images/projects/omnipos-dashboard-dark.webp" data-light-src="assets/images/projects/omnipos-dashboard-light.webp" data-dark-src="assets/images/projects/omnipos-dashboard-dark.webp" alt="OmniPOS Demo Shop dashboard showing register status and inventory alerts" class="card-img card-img--dashboard" loading="lazy">
               <div class="card-media-overlay">
-                <span class="badge badge-live">Live Production Demo</span>
+                <span class="badge badge-live">Live Demo &middot; Sign-in Required</span>
               </div>
             </div>
             <div class="card-body">
@@ -319,8 +313,8 @@
 
           <!-- Flagship Project 3: Ascenda -->
           <article class="project-card" data-category="education">
-            <div class="card-media" style="display: flex; align-items: center; justify-content: center; background: #0c1424; padding: 2.5rem;">
-              <img src="assets/images/projects/ascenda-logo.png" alt="Ascenda School Management System Logo" style="max-height: 120px; object-fit: contain;" loading="lazy">
+            <div class="card-media card-media--device-preview">
+              <img src="assets/images/projects/ascenda-dashboard.webp" data-light-src="assets/images/projects/ascenda-dashboard.webp" data-dark-src="assets/images/projects/ascenda-dashboard.webp" alt="Ascenda mobile administrator dashboard with synthetic school and user summary metrics" class="card-img" loading="lazy">
               <div class="card-media-overlay">
                 <span class="badge badge-verified">RBAC Architecture</span>
               </div>
@@ -353,8 +347,11 @@
 
           <!-- Flagship Project 4: GPA Calculator -->
           <article class="project-card" data-category="education">
-            <div class="card-media">
-              <img src="assets/images/projects/gpa-calculator-dark.png" alt="Live GPA Calculator dashboard with semester metrics and trend chart" class="card-img" loading="lazy">
+            <div class="card-media card-media--dashboard">
+              <picture>
+                <source media="(max-width: 520px)" srcset="assets/images/projects/gpa-calculator-mobile.webp" data-light-srcset="assets/images/projects/gpa-calculator-light.webp" data-dark-srcset="assets/images/projects/gpa-calculator-mobile.webp">
+                <img src="assets/images/projects/gpa-calculator-dashboard.webp" data-light-src="assets/images/projects/gpa-calculator-light.webp" data-dark-src="assets/images/projects/gpa-calculator-dashboard.webp" alt="GPA Calculator dashboard with synthetic coursework: 3.85 GPA, 13 credits, and 50 quality points" class="card-img card-img--dashboard" loading="lazy">
+              </picture>
               <div class="card-media-overlay">
                 <span class="badge badge-live">Live Web App</span>
               </div>
@@ -390,8 +387,8 @@
 
           <!-- Project 5: Electo -->
           <article class="project-card" data-category="civic">
-            <div class="card-media" style="display: flex; align-items: center; justify-content: center; background: #070e1c; padding: 2rem;">
-              <img src="assets/images/projects/scas-qr-sample.svg" alt="Electo Ballot and Verification Symbol" style="max-height: 110px; opacity: 0.85;" loading="lazy">
+            <div class="card-media card-media--dashboard">
+              <img src="assets/images/projects/electo-dashboard.webp" data-light-src="assets/images/projects/electo-dashboard.webp" data-dark-src="assets/images/projects/electo-dashboard.webp" alt="Electo election administration dashboard with synthetic ballot and voter metrics" class="card-img card-img--dashboard" loading="lazy">
               <div class="card-media-overlay">
                 <span class="badge badge-academic">Civic Technology</span>
               </div>
@@ -716,7 +713,7 @@
                 <h3>OmniPOS: High-Performance Retail &amp; Till System</h3>
               </div>
               <div class="cs-meta-bar">
-                <span class="badge badge-live">Live Public Demo</span>
+                <span class="badge badge-live">Live Demo &middot; Sign-in Required</span>
                 <span class="badge badge-verified">React PWA Frontend</span>
                 <span class="badge badge-verified">PostgreSQL Backend</span>
               </div>
@@ -755,16 +752,16 @@
                     Live Demo &amp; Verification Note
                   </h4>
                   <p>
-                    A live till demonstration is deployed and accessible at <strong>omnipos-three.vercel.app</strong>. For security best practices, shared administrative passwords are intentionally omitted from public documentation.
+                    The public demo dashboard is shown with the explicitly labeled Demo Shop selected. Its screenshots use demo inventory and omit personal account details; shared administrative passwords are intentionally omitted from public documentation.
                   </p>
                 </div>
               </div>
 
               <div class="cs-visual-column">
                 <div class="cs-diagram-frame">
-                  <img src="assets/images/projects/omnipos-desktop.png" alt="OmniPOS live register sign-in till interface" data-case-study="omnipos">
+                  <img src="assets/images/projects/omnipos-dashboard-dark.webp" data-light-src="assets/images/projects/omnipos-dashboard-light.webp" data-dark-src="assets/images/projects/omnipos-dashboard-dark.webp" alt="OmniPOS Demo Shop dashboard showing register status and inventory alerts" data-case-study="omnipos">
                   <div class="cs-caption">
-                    <span>Figure 2: OmniPOS Live Register Interface</span>
+                    <span>Figure 2: OmniPOS Demo Shop dashboard with inventory and register status</span>
                     <a href="https://omnipos-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-subtle btn-sm">Launch Live Demo &nearr;</a>
                   </div>
                 </div>

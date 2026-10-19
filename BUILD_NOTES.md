@@ -53,18 +53,31 @@ All visual assets reside in `assets/images/projects/` and the project root, obta
 
 | File Name | Project / Subject | Source / How Obtained |
 | :--- | :--- | :--- |
-| `scas-erd-full.png` | SCAS Attendance System | Extracted from `C:\GAF Tech\SCAS\docs\erd_scas_full.png` (994 KB full entity-relationship diagram generated from `information_schema`). |
+| `scas-dashboard.webp` | SCAS administrator dashboard | Captured from the local synthetic demo environment; administrator identity is replaced with a generic label. The app has no native dark/light mode switch, so the authentic capture is reused in both portfolio themes. |
+| `scas-sign-in-desktop.webp` | SCAS public sign-in | Captured from a local preview of the public source in a clean, blank sign-in state; the demonstration-account section is hidden. |
+| `scas-sign-in-mobile.webp` | SCAS public sign-in (mobile) | Mobile-viewport capture of the same blank sign-in page; demonstration-account details remain hidden. |
+| `scas-erd-full.png` | SCAS Attendance System | Full entity-relationship diagram generated from `information_schema`; retained as architecture evidence in the case study. |
 | `scas-qr-sample.svg` | SCAS / Electo Token | Extracted from `C:\GAF Tech\SCAS\tools\qr_sample.svg`. |
-| `omnipos-desktop.png` | OmniPOS Register | Automated headless Chrome capture of live Vercel production deployment (`https://omnipos-three.vercel.app/`). |
-| `gpa-calculator-dark.png` | GPA Calculator (Dark) | Automated headless Chrome capture of live GitHub Pages application (`https://gyiwah.github.io/gpa-calculator/`). |
-| `gpa-calculator-light.png`| GPA Calculator (Light) | Automated capture with theme toggle enabled on live app. |
-| `ascenda-logo.png` | Ascenda SMS | Extracted from `C:\GAF Tech\Ascenda\assets\images\logo.png`. |
+| `omnipos-dashboard-dark.webp` | OmniPOS Demo Shop dashboard (Dark) | Captured from the public deployment using its native dark theme and the explicitly labeled Demo Shop; no customer details are shown. |
+| `omnipos-dashboard-light.webp` | OmniPOS Demo Shop dashboard (Light) | The same dashboard captured in the app's native light theme. |
+| `omnipos-sign-in-desktop.webp` | OmniPOS public demo | Captured from the live Vercel deployment with blank fields; the deployed preview requires an account. |
+| `omnipos-sign-in-mobile.webp` | OmniPOS public demo (mobile) | Mobile-viewport capture of the same blank sign-in screen. |
+| `gpa-calculator-dashboard.webp` | GPA Calculator (Dark) | Captured from the live GitHub Pages app with five synthetic courses: 13 credits, 50 quality points, and a 3.85 GPA. |
+| `gpa-calculator-light.webp` | GPA Calculator (Light) | The same synthetic coursework shown with the light theme. |
+| `gpa-calculator-mobile.webp` | GPA Calculator (Mobile) | Mobile capture of the same synthetic coursework; used as the small-screen project-card source. |
+| `ascenda-dashboard.webp` | Ascenda administrator dashboard | Captured from the local web preview with synthetic summary data, in the app's fixed purple theme; account rows and emails are outside the captured viewport. The same authentic capture is used in both portfolio themes. |
+| `ascenda-sign-in-screen.webp` | Ascenda School Management System | Captured from the public app's local web preview with blank credentials and cropped to the mobile app viewport. The account-gated public preview does not expose student data. |
+| `electo-dashboard.webp` | Electo administrator dashboard | Captured from the local synthetic demo environment with the profile photo hidden. The app has no native dark/light mode switch, so the authentic capture is reused in both portfolio themes. |
+| `electo-landing-desktop.webp` | Electo Voting Platform | Captured from a clean local preview of the public source; the landing page is shown without ballot results or voter data. |
+| `electo-landing-mobile.webp` | Electo Voting Platform (mobile) | Mobile-viewport capture of the public landing and sign-in page with no ballot or voter data. |
 | `Image1.jpg` | ICT Education Lab | Authentic classroom photo of Alex and students in UEW computing laboratory. |
 | `Image2.jpg` | ICT Education Lab | Authentic photo of students in laboratory tutorial session. |
 | `ALEX FRIMPONG GYIWAH.jpg` | Professional Portrait | High-resolution portrait photograph of Alex Frimpong Gyiwah. |
 | `BENEDICTA.jpeg` | Testimonial Avatar | Benedicta Forson (Student, UEW). |
 | `Angela-Moro.jpg` | Testimonial Avatar | Angela Moro (Creative Solutions). |
 | `Kuvodo.jpg` | Testimonial Avatar | Erasmus K. Tidore (NanaKing Computers). |
+
+Dashboard captures use synthetic demo data. Account names and profile photos are omitted, and no voter roster, ballot record, or customer details are shown. OmniPOS and the GPA Calculator supply native light/dark screenshots, which the portfolio switches alongside its theme; SCAS, Ascenda, and Electo do not expose a native theme toggle, so their authentic captures remain unchanged in both portfolio themes. The original `Electo.png` was left untouched and excluded. The separate `Gyiwah/pos` repository remains private; no screenshot was taken from it.
 
 ---
 
